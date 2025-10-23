@@ -10,7 +10,15 @@ Asignar núcleos de CPU específicos:
 ```
 
 **¿Como saber el numero de procesadores virtuales que tiene una máquina?**
-## COMPLETAR
+Todo depende del Sistema operativo , en windows se puede acceder mediante el PowerShell con el siguiente comando 
+```
+Get-WmiObject -Class Win32_Processor | Select-Object -ExpandProperty NumberOfLogicalProcessors
+```
+o en el administrador de tareas y la sección de rendimiento del CPU, en el contenedor es con el comando:
+```
+docker exec <nombre_contenedor> nproc
+
+```
 
 ## Ejemplos
 _Puedes copiar y ejecutar directamente cada uno de los comandos_
