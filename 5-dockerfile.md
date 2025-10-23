@@ -53,18 +53,19 @@ docker build -t <nombre imagen>:<tag> .
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
 No olvides verificar en qué directorio se encuentra el archivo Dockerfile
 ```
-
+docker inspect snowpoomimg:1.0
 ```
 
 **¿Cuántos pasos se han ejecutado?**
-# RESPONDER 
+SE me ejecuto normal mente hasta el paso 2 que era el yum update debido a que no se encontraban algunos repositorios para actualizar, pero cambiando algunas rutas de los repositorios se ejecutó correctamente
 
 ### Inspeccionar la imagen creada
-# COMPLETAR CON UNA CAPTURA
+<img width="611" height="887" alt="image" src="https://github.com/user-attachments/assets/641ffc8c-dc87-4780-a9ca-3ba4b8c67c81" />
+
 
 **Modificar el archivo index.html para incluir su nombre y luego crear una nueva versión de la imagen anterior**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
-
+se ejecuto el paso 6 del COPY , los demas salen marcados como CACHED
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
 
@@ -75,14 +76,14 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
 ```
-
+docker run --name CentPoom -d -P snowpoomimg:1.1
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# COMPLETAR CON LA RESPUESTA
+Con el puerto 32768
 
 **¿Qué es una imagen huérfana?**
-# COMPLETAR CON LA RESPUESTA
+Es una imagen de Docker que ya no tiene un nombre ni etiqueta asociada, y no está siendo referenciada por ningún contenedor. Aparecen como <none>:<none>
 
 ### Identificar imágenes huérfanas
 ```
