@@ -57,7 +57,7 @@ docker inspect snowpoomimg:1.0
 ```
 
 **¿Cuántos pasos se han ejecutado?**
-SE me ejecuto normal mente hasta el paso 2 que era el yum update debido a que no se encontraban algunos repositorios para actualizar, pero cambiando algunas rutas de los repositorios se ejecutó correctamente
+SE me ejecutó normalmente hasta el paso 2 que era el yum update debido a que no se encontraban algunos repositorios para actualizar, pero cambiando algunas rutas de los repositorios se ejecutó correctamente
 
 ### Inspeccionar la imagen creada
 <img width="611" height="887" alt="image" src="https://github.com/user-attachments/assets/641ffc8c-dc87-4780-a9ca-3ba4b8c67c81" />
